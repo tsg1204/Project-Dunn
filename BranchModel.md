@@ -4,6 +4,7 @@
 ## 1. Make a fork of the repo
 Visit the github repo and click the fork button, this will give you a copy of the master repository in your account.
 
+
 ## 2. Clone the repo to your local machine.
 
 ## 3. Add the master repo as a remote

@@ -29,4 +29,6 @@ router.put('/update', function (req, res) {
         );
     res.redirect('/students')
 })
+
 module.exports = router;
+

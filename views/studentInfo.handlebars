@@ -7,16 +7,16 @@
 <hr>
 
 <div class="row">
-  <form class="col s12">
+  <form class="col s12" action="students/create" method="POST">
     <div class="row">
       <div class="input-field col s6">
-        <input id="student-name" type="text" class="validate" placeholder="Placeholder">
-        <label class="active" for="student-name">Student Name: </label>
+        <input name="studentName" type="text" class="validate" placeholder="Placeholder">
+        <label class="active" for="studentName">Student Name: </label>
         <a class="btn-floating disabled"><i class="material-icons">add</i></a>
       </div>
     </div>
     <div>
-      <a class="waves-effect waves-light btn-large">Submit</a>
+      <button type="submit" class="waves-effect waves-light btn-large">Submit</button>
     </div>
   </form>
 </div>

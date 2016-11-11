@@ -3,29 +3,31 @@ var router = express.Router();
 var models = require('../models');
 
 router.get('/', function (req, res) {
-    models.class.findAll().then(function (xxx) {
-        var hbsObject = { xxxs: xxxs};
-        //console.log('\nhandlebars hbsObject\n', hbsObject);
+    models.ClassInfo.findAll().then(function (classInfo) {
+        var hbsObject = { classInfo: classInfo };
+        console.log('\nhandlebars hbsObject\n', hbsObject);
         res.render('index', hbsObject);
     })
 });
 
 router.post('/create', function (req, res) {
-    models.class.create({
-        class_name: req.body.class_name,
-        devouted: false
+    models.ClassInfo.create({
+        school_name: req.body.schoolName,
+        class_name: req.body.className,
+        teacher_name: req.body.teacherName,
+        grade: req.body.grade
     })
     res.redirect('./');
 })
 
 router.put('/update', function (req, res) {
     //console.log(req.body.id);
-    models.class.update(
+    models.ClassInfo.update(
         {
-         devoured:true
+         //devoured:true
         },
         {
-            where:{id:req.body.xxx},
+            //where:{id:req.body.xxx},
         }
         );
     res.redirect('./')

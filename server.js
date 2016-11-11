@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var app = express();
 
+
 // This says that if we do root or /, we mean to look in the public folder.
 app.use(express.static(process.cwd() + '/public'));
 
@@ -11,6 +12,7 @@ app.use(bodyParser.urlencoded({
 }));
 // override with POST having ?_method=DELETE
 app.use(methodOverride('_method'));
+
 var exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({
     defaultLayout: 'main'
@@ -28,15 +30,16 @@ sequelizeConnection.query('SET FOREIGN_KEY_CHECKS = 0')
 
 // reach into our models object, and create each table based on the associated model.
 // note: force:true drops the table if it already exists
-
+  
 // make our tables
 // note: force:true drops the table if it already exists
 .then(function(){
-	return sequelizeConnection.sync({force:true})
+	return sequelizeConnection.sync({force:false})
 })
 
-var router = require('./controllers/class_controller.js');
+var router = require('./controllers/class-controller.js');
 app.use('/', router);
 
 var PORT = process.env.PORT || 3000;
 app.listen(PORT);
+

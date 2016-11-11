@@ -37,8 +37,11 @@ sequelizeConnection.query('SET FOREIGN_KEY_CHECKS = 0')
 	return sequelizeConnection.sync({force:false})
 })
 
-var router = require('./controllers/class-controller.js');
-app.use('/', router);
+var classRouter = require('./controllers/class-controller.js');
+app.use(classRouter);
+
+var studentRouter = require('./controllers/student-controller.js');
+app.use(studentRouter);
 
 var PORT = process.env.PORT || 3000;
 app.listen(PORT);

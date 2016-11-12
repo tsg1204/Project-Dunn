@@ -18,18 +18,18 @@ router.post('/students/create', function (req, res) {
 })
 
 
-router.put('/update', function (req, res) {
-    //console.log(req.body.id);
-    models.StudentInfo.update(
-        {
-         //devoured:true
-        },
-        {
-            //where:{id:req.body.xxx},
-        }
-        );
-    res.redirect('/students')
-})
+// router.put('/update', function (req, res) {
+//     //console.log(req.body.id);
+//     models.StudentInfo.update(
+//         {
+//          //devoured:true
+//         },
+//         {
+//             //where:{id:req.body.xxx},
+//         }
+//         );
+//     res.redirect('/students')
+// })
 
 module.exports = router;
 

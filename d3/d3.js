@@ -2,27 +2,27 @@ var model   = require('../models')['statistics'];
 var express = require('express');
 var router  = express.Router();
 
-model.sync();
 
-router.get('/', function (req, res) {
-	model.findAll().then(function (res) {
+
+router.get('/data', function (req, res) {
+	model.findAll().then(function (data) {
 		var classScores = [],
 			stateScores = [],
 			classData,
 			stateData;
 		
-		for (var i=0; i<res.length; i++) {
+		for (var i=0; i<data.length; i++) {
 			if (i<30) {
-				classScores.push(res[i].pass_rate);
+				classScores.push(data[i].pass_rate);
 			} else {
-				stateScores.push(res[i].pass_rate);
+				stateScores.push(data[i].pass_rate);
 			}
 		}
 		
 		classData = makeData(classScores);
 		stateData = makeData(stateScores);
 
-		res.json({classData: classData, stateData: stateData});	
+		res.send({classData: classData, stateData: stateData});	
 	});
 });	
 

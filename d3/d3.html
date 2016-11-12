@@ -10,6 +10,8 @@
     font-family: Arial;
   }
   .container {
+    display: flex;
+    justify-content: center;
     width: 90%;
     margin: auto;
   }
@@ -17,8 +19,8 @@
     display: inline-block;
   }
   .chart {
-    margin: 25px;
-    padding: 40px;
+    display: flex;
+    justify-content: center;
   }
   .class-chart, .state-chart {
     padding-left: 50px;
@@ -34,11 +36,7 @@
     font-size: 2em;
     font-family: Arial;
   }
-  g.x text {
-    transform: rotate(-45deg);
-    text-anchor: end;
-    margin: 5px;
-  }
+  
   .bar-group:hover {
     fill: lightblue;
   }
@@ -72,13 +70,19 @@
 </html>
 
 <script>
-var classData = [
-  {name: 'Min', value: 36},
-  {name: 'Max', value: 91},
-  {name: 'Avg', value: 77},
-  {name: 'Rng', value: 55},
-  {name: 'Med', value: 80}
-];
+
+d3.xhr('/data', function (data) {
+
+var classData = data.classData,
+    stateData = data.stateData;
+
+// var classData = [
+//   {name: 'Min', value: 36},
+//   {name: 'Max', value: 91},
+//   {name: 'Avg', value: 77},
+//   {name: 'Rng', value: 55},
+//   {name: 'Med', value: 80}
+// ];
 
 var stateData = [
   {name: 'Min', value: 8},
@@ -160,7 +164,6 @@ function animateClass() {
     .data(classData)
     .enter()
     .append('g')
-    .text(function(d){return d.value})
     .attr({
       transform: function (d, i) {
         return 'translate(' + convert.x(d.name) + ', 0)';
@@ -278,5 +281,5 @@ function animateState() {
 
 animateClass(); 
 animateState();
-
+});
 </script>

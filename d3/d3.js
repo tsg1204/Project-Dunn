@@ -22,8 +22,9 @@ router.get('/', function (req, res) {
 		classData = makeData(classScores);
 		stateData = makeData(stateScores);
 
-	res.json({classData: classData, stateData: stateData});	
-});
+		res.json({classData: classData, stateData: stateData});	
+	});
+});	
 
 function makeData (data) {
 	var sum = 0;
@@ -58,4 +59,6 @@ function findMedian(data) {
     } else {
         return (m[middle] + m[middle + 1]) / 2.0;
     }
-}
+};
+
+module.exports = router;

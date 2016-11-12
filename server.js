@@ -6,7 +6,8 @@ var express             = require('express'),
     models              = require('./models'),
 	classRouter         = require('./controllers/class-controller.js'),
 	studentRouter       = require('./controllers/student-controller.js'),
-	classroomRouter = require('./controllers/classroom-controller.js'),
+	classroomRouter     = require('./controllers/classroom-controller.js'),
+	d3Router            = require('./d3/d3.js'),
 	sequelizeConnection = models.sequelize;
 
 app.use(express.static(process.cwd() + '/public'));
@@ -14,7 +15,7 @@ app.use(methodOverride('_method'));
 app.use(studentRouter);
 app.use(classRouter);
 app.use(classroomRouter);
-app.use(d3router);
+app.use(d3Router);
 app.use(bodyParser.urlencoded({
 	extended: false
 }));

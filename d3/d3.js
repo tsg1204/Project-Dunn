@@ -1,6 +1,6 @@
-var model = require('../models')['statistics'];
+var model   = require('../models')['statistics'];
 var express = require('express');
-var router = express.Router();
+var router  = express.Router();
 
 model.sync();
 
@@ -24,17 +24,6 @@ router.get('/', function (req, res) {
 
 	res.json({classData: classData, stateData: stateData});	
 });
-
-
-
-
-
-
-
-
-
-
-
 
 function makeData (data) {
 	var sum = 0;

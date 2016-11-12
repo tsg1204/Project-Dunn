@@ -17,6 +17,7 @@ router.post('/students/create', function (req, res) {
     res.redirect('/students');
 })
 
+
 router.put('/update', function (req, res) {
     //console.log(req.body.id);
     models.StudentInfo.update(
@@ -29,4 +30,6 @@ router.put('/update', function (req, res) {
         );
     res.redirect('/students')
 })
+
 module.exports = router;
+

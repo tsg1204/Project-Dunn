@@ -5,7 +5,7 @@ var models = require('../models');
 router.get('/', function (req, res) {
     models.ClassInfo.findAll().then(function (classInfo) {
         var hbsObject = { classInfo: classInfo };
-        console.log('\nhandlebars hbsObject\n', hbsObject);
+        //console.log('\nhandlebars hbsObject\n', hbsObject);
         res.render('index', hbsObject);
     })
 });

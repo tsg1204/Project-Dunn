@@ -1,6 +1,6 @@
 
  
-d3.json("/api/d3", function (error, response) {
+d3.json("/api/bar", function (error, response) {
   var dataSet   = response,
       classData = dataSet.classData,
       stateData = dataSet.stateData;

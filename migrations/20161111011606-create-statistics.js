@@ -14,6 +14,15 @@ module.exports = {
       pass_rate: {
         type: Sequelize.INTEGER
       },
+      pass_prof_rate: {
+        type: Sequelize.INTEGER
+      },
+      pass_adv_rate: {
+        type: Sequelize.INTEGER
+      },
+      pass_fail_rate: {
+        type: Sequelize.INTEGER
+      },
       createdAt: {
         type: Sequelize.DATE
       },

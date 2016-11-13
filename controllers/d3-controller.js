@@ -2,7 +2,7 @@ var model   = require('../models')['statistics'];
 var express = require('express');
 var router  = express.Router();
 
-router.get('/api/d3', function (req, res) {
+router.get('/api/bar', function (req, res) {
 	model.findAll().then(function (data) {
 		var classScores = [],
 			stateScores = [],
@@ -17,14 +17,31 @@ router.get('/api/d3', function (req, res) {
 			}
 		}
 		
-		classData = makeData(classScores);
-		stateData = makeData(stateScores);
-
+		classData = makeBarData(classScores);
+		stateData = makeBarData(stateScores);
+		
 		res.json({classData: classData, stateData: stateData});
 	});
 });	
 
-function makeData (data) {
+router.get('/api/parallel', function (req, res) {
+	model.findAll().then(function (data) {
+		var organizedClassData = [],
+			organizedStateData = [];
+
+		for (var i=0; i<data.length; i++) {
+			if (i<30) {
+				organizedClassData.push([data[i].pass_rate, data[i].pass_prof_rate, data[i].pass_adv_rate, data[i].fail_rate]);
+			} else {
+				organizedStateData.push([data[i].pass_rate, data[i].pass_prof_rate, data[i].pass_adv_rate, data[i].fail_rate]);
+			}
+		}
+
+		res.json({orgClassData: organizedClassData, orgStateData: organizedStateData});
+	});
+});	
+
+function makeBarData (data) {
 	var sum = 0;
 	
 	for (var i=0; i<data.length; i++) {
@@ -42,6 +59,10 @@ function makeData (data) {
 		{name: "range", value: range},
 		{name: "median", value: median}
 	]	
+};
+
+function organizeRawData (data) {
+
 };
 
 function findMedian(data) {

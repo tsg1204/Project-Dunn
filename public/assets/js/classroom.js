@@ -35,3 +35,5 @@ var studentData = JSON.stringify(frm.serializeArray());
 //     }
 //     return new Handlebars.SafeString( '<a href="' + url + '">' + text + '</a>' );
 // });
+
+console.log("classroom");

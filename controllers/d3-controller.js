@@ -2,9 +2,7 @@ var model   = require('../models')['statistics'];
 var express = require('express');
 var router  = express.Router();
 
-
-
-router.get('/data', function (req, res) {
+router.get('/api/d3', function (req, res) {
 	model.findAll().then(function (data) {
 		var classScores = [],
 			stateScores = [],
@@ -22,7 +20,7 @@ router.get('/data', function (req, res) {
 		classData = makeData(classScores);
 		stateData = makeData(stateScores);
 
-		res.send({classData: classData, stateData: stateData});	
+		res.json({classData: classData, stateData: stateData});
 	});
 });	
 
@@ -32,18 +30,18 @@ function makeData (data) {
 	for (var i=0; i<data.length; i++) {
 		sum += data[i];
 	}
-	var max = data.sort(function(a,b){return b-a;})[0],
-	    min = data.sort(function(a,b){return a-b;})[0],
-	    range = max - min,
+	var max    = data.sort(function(a,b){return b-a;})[0],
+	    min    = data.sort(function(a,b){return a-b;})[0],
+	    range  = max - min,
 	    median = findMedian(data);
 	
-    return {
-		min: min,
-		max: max,
-		avg: Math.round(sum/data.length),
-		range: range,
-		median: median
-	}	
+    return [
+		{name: "min", value: min},
+		{name: "max", value: max},
+		{name: "avg", value: Math.round(sum/data.length)},
+		{name: "range", value: range},
+		{name: "median", value: median}
+	]	
 };
 
 function findMedian(data) {

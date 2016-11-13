@@ -1,0 +1,88 @@
+* {
+  font-family: Arial;
+  }
+
+#heading {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
+}
+
+.chart-container {
+  display: inline-block;
+}
+
+.label:nth-child(2) {
+  position: relative;
+  left: 35px;
+}
+
+.chart {
+  display: flex;
+  justify-content: center;
+}
+
+.class-chart, .state-chart {
+  padding-left: 50px;
+}
+
+.class-chart {
+  fill: #00dfa1;
+}
+
+.state-chart {
+  fill: #00b6ba;
+}
+
+.title {
+  text-align: center;
+  font-size: 2em;
+  font-family: Arial;
+}
+
+.label {
+  width: 450px;
+  text-align: center;
+}
+
+.bar-value {
+  visibility: hidden;
+}
+
+.bar-group:hover > .bar-value {
+  visibility: visible;
+}
+
+.bar-group:hover {
+  fill: #006a89;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: auto;
+}
+
+.axis text {
+  font-size: 18px;
+}
+
+.chart .current {
+  fill: green;
+  cursor: pointer;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}

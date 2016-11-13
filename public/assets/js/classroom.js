@@ -37,3 +37,36 @@ var studentData = JSON.stringify(frm.serializeArray());
 // });
 
 console.log("classroom");
+
+//========================================================> Below is all added JS from Houston ==
+function randomizer(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (0 !== currentIndex) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+    return array;
+  }
+
+  var arr = ["Student 1", "Student 2", "Student 3", "Student 4", "Student 5", "Student 6", "Student 7", "Student 8", "Student 9", "Student 10", "Student 11", "Student 12"];
+
+  $("#randomize").on("click", function () {
+    $("#randomize").text("Generate New Seating");
+    $("#whereToPutSeats").text("");
+    arr = randomizer(arr);
+
+    for (i=0; i < arr.length; i++) {
+      studentButton = "<a class='waves-effect waves-light btn studentButtons'>"+arr[i]+"</a>";
+      $("#whereToPutSeats").append(studentButton);
+      console.log(arr[i]);
+    };
+    // modalButton = "<a class='waves-effect waves-light btn col s12' href='#modal1'>Modal</a>";
+    // $("#seatingContainer").prepend(modalButton);
+  });
+
+  $(document).ready(function(){
+    $('.modal').modal();
+  });

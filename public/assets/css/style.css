@@ -1,34 +1,153 @@
-#classSpecs {
-  border-top: solid black 2px;
-  border-bottom: solid black 2px;
+/* Class Info CSS */
+body {
+  background-image: url("http://media.indiedb.com/images/members/1/356/355160/classroom_final_1920x1200_w.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+h3 {
   text-align: center;
 }
 
-#lessonPlan h5 {
-  text-align: center;
+.container {
+  background: rgba(255,255,255,0.5);
+  padding: 10px;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
-#sidebar {
-  border-left: solid black 2px;
-  background-color: #1e88e5;
+#inspirational {
+  background: rgba(255,0,50, 0.35);
   color: white;
+  border-radius: 5px;
+  height: 459px;
+  padding: 25px;
 }
 
-#randomize {
-  margin: 20px;
-  width: 320px;
-  margin-top: 38px;
-  height: 100px;
-  padding-top: 34px;
-  background-color: #e53935;
+/* label color */
+.input-field label {
+ color: black;
+ font-weight: bold;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+ color: black;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+ border-bottom: 1px solid #000;
+ box-shadow: 0 1px 0 0 #000;
 }
 
-.classFront {
-  text-align: center;
-  background-color: #ee6e73;
-  color: white;
-}
+/* Student Info CSS */
+h2 {
+        text-align: center;
+      }
 
-.student {
-  margin: 60px;
-}
+      h5 {
+        text-align: center;
+      }
+
+      .btn {
+        background-color: white;
+        color: black;
+      }
+
+      #studentList {
+        height: 307px;
+        overflow: auto;
+        font-size: 25px;
+      }
+
+
+
+     #instructions {
+       background: rgba(200,100,250, 0.7);
+       border-radius: 5px;
+       color: white;
+       height: 282px;
+     }
+
+     #studentAdditions {
+       text-align: center;
+       padding: 3px;
+      padding-left: 10px;
+      padding-right: 10px;
+     }
+
+/*Classroom CSS*/
+nav {
+      background-color: #4db6ac;
+    }
+
+    #seatingContainer {
+      background-image: url("http://media.indiedb.com/images/members/1/356/355160/classroom_final_1920x1200_w.jpg");
+      background-repeat:no-repeat;
+      background-size:cover;
+      height: 596px;
+    }
+
+    #classSpecs {
+      /*border-top: solid black 2px;*/
+      /*border-bottom: solid black 2px;*/
+      text-align: center;
+      background-color: rgba(0,0,0,0.3);
+      color: white;
+      padding: 18px;
+    }
+
+    #lessonPlan h5 {
+      text-align: center;
+    }
+
+    #sidebar {
+      /*border-left: solid black 2px;*/
+      background-color: #ee6e73;
+      height: 596px;
+    }
+
+    #randomize {
+      margin: 20px;
+      width: 320px;
+      margin-top: 38px;
+      height: 100px;
+      padding-top: 34px;
+      background-color: #fb8c00;
+    }
+
+    .classFront {
+      text-align: center;
+      background-color: #ee6e73;
+      color: white;
+    }
+
+    .student {
+      margin: 60px;
+    }
+
+    #lessonPlan {
+      padding-left: 10px;
+      padding-right: 40px;
+      text-align: center;
+      color: white;
+    }
+
+    #lessonPlan a {
+      color: white;
+    }
+
+    .studentButtons {
+      margin: 40px;
+      width: 160px;
+    }
+
+    nav .brand-logo {
+      margin-left: 70px;
+    }
+
+    #modalButton {
+      background-color: #fb8c00;
+      height: 60px;
+      margin-top: 0px;
+      padding-top: 10px;
+    }

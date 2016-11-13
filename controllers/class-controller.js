@@ -11,13 +11,13 @@ router.get('/', function (req, res) {
 });
 
 router.post('/create', function (req, res) {
-    models.ClassInfo.create({
-        school_name: req.body.schoolName,
-        class_name: req.body.className,
-        teacher_name: req.body.teacherName,
-        grade: req.body.grade
-    })
-    res.redirect('./');
+    // models.ClassInfo.create({
+    //     school_name: req.body.schoolName,
+    //     class_name: req.body.className,
+    //     teacher_name: req.body.teacherName,
+    //     grade: req.body.grade
+    // })
+    res.redirect('/students');
 })
 
 router.put('/update', function (req, res) {
@@ -30,7 +30,6 @@ router.put('/update', function (req, res) {
             //where:{id:req.body.xxx},
         }
         );
-    res.redirect('./')
+    res.render('./')
 })
 module.exports = router;
-

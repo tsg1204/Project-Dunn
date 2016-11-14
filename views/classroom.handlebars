@@ -1,10 +1,10 @@
 <nav>
-  <div class="nav-wrapper container">
+  <!-- <div class="nav-wrapper container"> -->
     <a href="#" class="brand-logo">Front Of The Class</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li><a href="#">Button For Something?</a></li>
     </ul>
-  </div>
+  <!-- </div> -->
 </nav>
 
 <div class='row'>
@@ -26,21 +26,89 @@
 <!-- Classroom seating -->
   <div id="seatingContainer" class='col s8'>
 
-    <!-- Modal Trigger -->
-    <div class="col s1"></div>
-    <a id="modalButton" class="waves-effect waves-light btn col s10" href="#modal1">Assign Grades</a>
-    <!-- <div class="col s1"></div> -->
 
     <div id="whereToPutSeats"></div>
 
     <!-- Modal Structure -->
     <div id="modal1" class="modal bottom-sheet">
       <div class="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
+        <div class="row">
+          <!-- Manual Grade Input -->
+          <form id="gradeInputForm" class="col s12">
+            <div class="row">
+              <!-- <h6>Input Grade Manually</h6> -->
+            </div>
+            <div class="row">
+              <div class="input-field col s3">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="icon_prefix" type="text" class="validate">
+                <label for="icon_prefix">Student Name</label>
+              </div>
+              <div class="input-field col s3">
+                <i class="material-icons prefix">input</i>
+                <input id="gradeInput" type="text" class="validate">
+                <label for="gradeInput">Input Grade</label>
+              </div>
+              <div class="input-field col s3">
+                <a id="addGrade" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+              </div>
+            </div>
+          </form>
+
+          <!-- Student Information (Grade-wise) -->
+          <div class="row studentInformation">
+            <div class="input-field col s3">
+              <h5>Houston Breedlove</h5>
+            </div>
+            <div class="input-field col s5">
+              <h5 class="hwAssignment">Today's Homework Assignment: </h5>
+            </div>
+            <div class="input-field col s3">
+              <h5 id="student1Grade" class="grade"></h5>
+            </div>
+          </div>
+
+          <div class="row studentInformation">
+            <div class="input-field col s3">
+              <h5>Donald Trump</h5>
+            </div>
+            <div class="input-field col s5">
+              <h5 class="hwAssignment">Today's Homework Assignment: </h5>
+            </div>
+            <div class="input-field col s3">
+              <h5 class="grade">A+</h5>
+            </div>
+          </div>
+
+          <div class="row studentInformation">
+            <div class="input-field col s3">
+              <h5>Donald Duck</h5>
+            </div>
+            <div class="input-field col s5">
+              <h5 class="hwAssignment">Today's Homework Assignment: </h5>
+            </div>
+            <div class="input-field col s3">
+              <h5 class="grade">A+</h5>
+            </div>
+          </div>
+
+          <div class="row studentInformation">
+            <div class="input-field col s3">
+              <h5>Hillary Clinton</h5>
+            </div>
+            <div class="input-field col s5">
+              <h5 class="hwAssignment">Today's Homework Assignment: </h5>
+            </div>
+            <div class="input-field col s3">
+              <h5 class="grade">A+</h5>
+            </div>
+          </div>
+
+
+        </div>
       </div>
       <div class="modal-footer">
-        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
       </div>
     </div>
 
@@ -56,11 +124,16 @@
       <h5>Class: Physics 101</h5>
       <h5>Teacher: Lucas Dunn</h5>
       <h5>Grade: 10</h5>
+
+      <!-- Modal Trigger -->
+      <div class="col s1"></div>
+      <a id="modalButton" class="waves-effect waves-light btn col s10" href="#modal1">Assign Grades</a>
+
     </div>
     <div id='lessonPlan' class='row'>
       <h5>Lesson Plan</h5>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
       <p>
         <a href="https://docs.google.com/document/d/1ZkaDSltDIJukowQPu3S_POeUEWChsMNWEXjJB90SmIM/edit?usp=sharing" target="_blank">Link to Lesson Plan/Class Activity</a>

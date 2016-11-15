@@ -2,7 +2,34 @@
   font-family: Arial;
   }
 
-#heading {
+.changeView {
+  -moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
+  -webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;
+  box-shadow:inset 0px 39px 0px -24px #e67a73;
+  background-color:#e4685d;
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  border-radius:4px;
+  border:1px solid #ffffff;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:18px;
+  padding:6px 15px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #b23e35;
+}
+.changeView:hover {
+  background-color:#eb675e;
+}
+.changeView:active {
+  position:relative;
+  top:1px;
+}
+
+
+.heading {
   text-align: center;
   text-decoration: underline;
 }
@@ -80,9 +107,51 @@
 }
 
 .centered {
+  width: 90%;
   position: fixed;
   top: 50%;
   left: 50%;
-  /* bring your own prefixes */
   transform: translate(-50%, -50%);
 }
+
+
+/* Parallel Coordinate Graph CSS */
+.parcoords > canvas {
+  font: 14px sans-serif;
+  position: absolute;
+}
+
+.parcoords > canvas {
+  pointer-events: none;
+}
+
+.parcoords text.label {
+  cursor: default;
+}
+
+.parcoords rect.background:hover {
+  fill: rgba(120,120,120,0.2);
+}
+
+.parcoords canvas {
+  opacity: 1;
+  transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+}
+
+.parcoords canvas.faded {
+  opacity: 0.25;
+}
+
+.parcoords {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: white;
+}
+

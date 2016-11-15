@@ -11,6 +11,7 @@ router.get('/', function (req, res) {
 });
 
 router.post('/create', function (req, res) {
+    console.log("req: ", req.body.schoolName);
     // models.ClassInfo.create({
     //     school_name: req.body.schoolName,
     //     class_name: req.body.className,

@@ -1,9 +1,9 @@
-var express             = require('express'),
-    bodyParser          = require('body-parser'),
-    methodOverride      = require('method-override'),
-    exphbs              = require('express-handlebars'),
-    app                 = express(),
-    models              = require('./models'),
+var express           = require('express'),
+  bodyParser          = require('body-parser'),
+  methodOverride      = require('method-override'),
+  exphbs              = require('express-handlebars'),
+  app                 = express(),
+  models              = require('./models'),
 	classRouter         = require('./controllers/class-controller.js'),
 	studentRouter       = require('./controllers/student-controller.js'),
 	classroomRouter     = require('./controllers/classroom-controller.js'),
@@ -32,4 +32,3 @@ sequelizeConnection.query('SET FOREIGN_KEY_CHECKS = 0')
 
 var PORT = process.env.PORT || 3000;
 app.listen(PORT);
-

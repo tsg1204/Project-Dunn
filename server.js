@@ -12,13 +12,13 @@ var express           = require('express'),
 
 app.use(express.static(process.cwd() + '/public'));
 app.use(methodOverride('_method'));
+app.use(bodyParser.urlencoded({
+	extended: false
+}));
 app.use(studentRouter);
 app.use(classRouter);
 app.use(classroomRouter);
 app.use(d3Router);
-app.use(bodyParser.urlencoded({
-	extended: false
-}));
 
 app.engine('handlebars', exphbs({
     defaultLayout: 'main'

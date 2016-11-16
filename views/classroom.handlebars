@@ -27,7 +27,11 @@
   <div id="seatingContainer" class='col s8'>
 
 
-    <div id="whereToPutSeats"></div>
+    <div id="whereToPutSeats">
+      {{#each studentInfo}}
+          <a class='waves-effect waves-light btn studentButtons'>{{this.student_name}}</a>
+      {{/each}}
+    </div>
 
     <!-- Modal Structure -->
     <div id="modal1" class="modal bottom-sheet">
@@ -121,9 +125,11 @@
         <a id='randomize' class="waves-effect waves-light btn">Generate Class Seating</a>
     </div>
     <div id='classSpecs' class='row'>
-      <h5>Class: Physics 101</h5>
-      <h5>Teacher: Lucas Dunn</h5>
-      <h5>Grade: 10</h5>
+      {{#each ClassInfos}}
+        <h5>Class: {{this.class_name}}</h5>
+        <h5>Teacher: {{this.teacher_name}}</h5>
+        <h5>Grade: {{this.grade}}</h5>
+      {{/each}}
 
       <!-- Modal Trigger -->
       <div class="col s1"></div>

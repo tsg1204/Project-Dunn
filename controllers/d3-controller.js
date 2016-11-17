@@ -8,7 +8,7 @@ router.get('/api/bar', function (req, res) {
 			stateScores = [],
 			classData,
 			stateData;
-		
+
 		for (var i=0; i<data.length; i++) {
 			if (i<30) {
 				classScores.push(data[i].pass_rate);
@@ -16,13 +16,13 @@ router.get('/api/bar', function (req, res) {
 				stateScores.push(data[i].pass_rate);
 			}
 		}
-		
+
 		classData = makeBarData(classScores);
 		stateData = makeBarData(stateScores);
-		
+
 		res.json({classData: classData, stateData: stateData});
 	});
-});	
+});
 
 router.get('/api/parallel', function (req, res) {
 	model.findAll().then(function (data) {
@@ -39,11 +39,11 @@ router.get('/api/parallel', function (req, res) {
 
 		res.json({orgClassData: organizedClassData, orgStateData: organizedStateData});
 	});
-});	
+});
 
 function makeBarData (data) {
 	var sum = 0;
-	
+
 	for (var i=0; i<data.length; i++) {
 		sum += data[i];
 	}
@@ -51,14 +51,14 @@ function makeBarData (data) {
 	    min    = data.sort(function(a,b){return a-b;})[0],
 	    range  = max - min,
 	    median = findMedian(data);
-	
+
     return [
 		{name: "min", value: min},
 		{name: "max", value: max},
 		{name: "avg", value: Math.round(sum/data.length)},
 		{name: "range", value: range},
 		{name: "median", value: median}
-	]	
+	]
 };
 
 function organizeRawData (data) {
@@ -72,7 +72,7 @@ function findMedian(data) {
         return a - b;
     });
 
-    var middle = Math.floor((m.length - 1) / 2); 
+    var middle = Math.floor((m.length - 1) / 2);
     if (m.length % 2) {
         return m[middle];
     } else {

@@ -1,27 +1,11 @@
 <nav>
-  <!-- <div class="nav-wrapper container"> -->
     <a href="#" class="brand-logo">Front Of The Class</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li><a href="d3.html">Button For Something?</a></li>
     </ul>
-  <!-- </div> -->
 </nav>
 
 <div class='row'>
-
-<!-- Houston didn't want to remove this until talking to Tatianna -->
-<!--================================================================-->
-  <!-- Classroom seating -->
-  <!-- <div class='col s8'>
-    <div class='row'>
-      {{#each studentInfo}}
-      <div class='col s2 student'>
-        <a class="waves-effect waves-light btn">{{this.student_name}}</a>
-      </div>
-      {{/each}}
-    </div>
-  </div> -->
-<!--================================================================-->
 
 <!-- Classroom seating -->
   <div id="seatingContainer" class='col s8'>
@@ -40,7 +24,6 @@
           <!-- Manual Grade Input -->
           <form id="gradeInputForm" class="col s12">
             <div class="row">
-              <!-- <h6>Input Grade Manually</h6> -->
             </div>
             <div class="row">
               <div class="input-field col s3">
@@ -73,54 +56,7 @@
           </div>
           {{/each}}
 
-          <!-- Student Information (Grade-wise) -->
-          <div class="row studentInformation">
-            <div class="input-field col s3">
-              <h5>Houston Breedlove</h5>
-            </div>
-            <div class="input-field col s5">
-              <h5 class="hwAssignment">Today's Homework Assignment: </h5>
-            </div>
-            <div class="input-field col s3">
-              <h5 id="student1Grade" class="grade"></h5>
-            </div>
-          </div>
 
-          <div class="row studentInformation">
-            <div class="input-field col s3">
-              <h5>Donald Trump</h5>
-            </div>
-            <div class="input-field col s5">
-              <h5 class="hwAssignment">Today's Homework Assignment: </h5>
-            </div>
-            <div class="input-field col s3">
-              <h5 class="grade">A+</h5>
-            </div>
-          </div>
-
-          <div class="row studentInformation">
-            <div class="input-field col s3">
-              <h5>Donald Duck</h5>
-            </div>
-            <div class="input-field col s5">
-              <h5 class="hwAssignment">Today's Homework Assignment: </h5>
-            </div>
-            <div class="input-field col s3">
-              <h5 class="grade">A+</h5>
-            </div>
-          </div>
-
-          <div class="row studentInformation">
-            <div class="input-field col s3">
-              <h5>Hillary Clinton</h5>
-            </div>
-            <div class="input-field col s5">
-              <h5 class="hwAssignment">Today's Homework Assignment: </h5>
-            </div>
-            <div class="input-field col s3">
-              <h5 class="grade">A+</h5>
-            </div>
-          </div>
 
 
         </div>
@@ -138,7 +74,9 @@
         <!-- Randomize Button -->
         <a id='randomize' class="waves-effect waves-light btn">Generate Class Seating</a>
     </div>
+
     <div id='classSpecs' class='row'>
+
       {{#each ClassInfos}}
         <h5>Class: {{this.class_name}}</h5>
         <h5>Teacher: {{this.teacher_name}}</h5>
@@ -150,6 +88,7 @@
       <a id="modalButton" class="waves-effect waves-light btn col s10" href="#modal1">Assign Grades</a>
 
     </div>
+
     <div id='lessonPlan' class='row'>
       <h5>Lesson Plan</h5>
       <p>
@@ -159,6 +98,7 @@
         <a href="https://docs.google.com/document/d/1ZkaDSltDIJukowQPu3S_POeUEWChsMNWEXjJB90SmIM/edit?usp=sharing" target="_blank">Link to Lesson Plan/Class Activity</a>
       </p>
     </div>
+    
   </div>
 </div>
 

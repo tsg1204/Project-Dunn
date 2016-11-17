@@ -11,12 +11,13 @@ router.get('/', function (req, res) {
 });
 
 router.post('/create', function (req, res) {
-    // models.ClassInfo.create({
-    //     school_name: req.body.schoolName,
-    //     class_name: req.body.className,
-    //     teacher_name: req.body.teacherName,
-    //     grade: req.body.grade
-    // })
+    // console.log("req: ", req.body.schoolName);
+    models.ClassInfo.create({
+        school_name: req.body.schoolName,
+        class_name: req.body.className,
+        teacher_name: req.body.teacherName,
+        grade: req.body.grade
+    })
     res.redirect('/students');
 })
 

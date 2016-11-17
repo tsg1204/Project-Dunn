@@ -1,9 +1,9 @@
-var express             = require('express'),
-    bodyParser          = require('body-parser'),
-    methodOverride      = require('method-override'),
-    exphbs              = require('express-handlebars'),
-    app                 = express(),
-    models              = require('./models'),
+var express           = require('express'),
+  bodyParser          = require('body-parser'),
+  methodOverride      = require('method-override'),
+  exphbs              = require('express-handlebars'),
+  app                 = express(),
+  models              = require('./models'),
 	classRouter         = require('./controllers/class-controller.js'),
 	studentRouter       = require('./controllers/student-controller.js'),
 	classroomRouter     = require('./controllers/classroom-controller.js'),
@@ -12,13 +12,13 @@ var express             = require('express'),
 
 app.use(express.static(process.cwd() + '/public'));
 app.use(methodOverride('_method'));
+app.use(bodyParser.urlencoded({
+	extended: false
+}));
 app.use(studentRouter);
 app.use(classRouter);
 app.use(classroomRouter);
 app.use(d3Router);
-app.use(bodyParser.urlencoded({
-	extended: false
-}));
 
 app.engine('handlebars', exphbs({
     defaultLayout: 'main'
@@ -32,4 +32,3 @@ sequelizeConnection.query('SET FOREIGN_KEY_CHECKS = 0')
 
 var PORT = process.env.PORT || 3000;
 app.listen(PORT);
-

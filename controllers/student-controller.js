@@ -11,10 +11,10 @@ router.get('/students', function (req, res) {
 });
 
 router.post('/students/create', function (req, res) {
-    // models.StudentInfo.create({
-    //     student_name: req.body.studentName
-    // })
-    res.redirect('/classroom');
+    models.StudentInfo.create({
+        student_name: req.body.studentName
+    })
+    res.redirect('/students');
 })
 
 

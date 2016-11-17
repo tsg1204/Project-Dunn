@@ -45,20 +45,10 @@ var studentCount = 1;
 var studentNames = [];
 
 $("#addMoreStudents").on("click", function () {
-  //capture the value
   var student1 = $("#student1").val();
-
-  //Erase the html from welcome
-  // $("#studentAdditions").text("");
-
-  //append new student
   var addedStudent = "<p>" + studentCount + ". " + student1 + "</p>";
   $("#studentList").append(addedStudent);
-
-  //log that new student into an array
   studentNames.push(student1);
-  console.log(studentNames);
-
   studentCount++;
   $("#addMoreStudents").text("Add Another Student");
   $("#student1").val("");
@@ -84,14 +74,11 @@ function randomizer(array) {
     $("#randomize").text("Generate New Seating");
     $("#whereToPutSeats").text("");
     arr = randomizer(arr);
-
     for (i=0; i < arr.length; i++) {
       studentButton = "<a class='waves-effect waves-light btn studentButtons'>"+arr[i]+"</a>";
       $("#whereToPutSeats").append(studentButton);
       console.log(arr[i]);
     };
-    // modalButton = "<a class='waves-effect waves-light btn col s12' href='#modal1'>Modal</a>";
-    // $("#seatingContainer").prepend(modalButton);
   });
 
   $(document).ready(function(){
@@ -104,4 +91,4 @@ function randomizer(array) {
     $("#student1Grade").append(grade);
     $("gradeInput").val("");
     console.log(grade);
-  })
+  });

@@ -8,6 +8,7 @@ var express           = require('express'),
 	studentRouter       = require('./controllers/student-controller.js'),
 	classroomRouter     = require('./controllers/classroom-controller.js'),
 	d3Router            = require('./controllers/d3-controller.js'),
+	stormpath           = require('stormpath'),
 	sequelizeConnection = models.sequelize;
 
 app.use(express.static(process.cwd() + '/public'));

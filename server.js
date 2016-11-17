@@ -15,8 +15,16 @@ app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({
 	extended: false
 }));
+<<<<<<< bc1edf129ebf596cc205faf78d1ff911f70b9400
 app.use(studentRouter);
 app.use(classRouter);
+app.use(classroomRouter);
+app.use(d3Router);
+=======
+>>>>>>> student table, classroom contr changed
+
+app.use(classRouter);
+app.use(studentRouter);
 app.use(classroomRouter);
 app.use(d3Router);
 

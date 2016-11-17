@@ -4,7 +4,7 @@
     <div class="col s1"></div>
 
     <!-- studentInfoForm -->
-    <form id="studentsForm" action="students/create" name="students" class="col s5" method="POST">
+    <form id="studentsForm" name="students" class="col s5" action="students/create" method="POST">
       <div class="row">
         <div id="instructions" class="col s11">
           <h5>Adding students to your class is EASY!</h5>
@@ -21,13 +21,14 @@
 
       <div id="newStudent" class="row">
         <div class="input-field col s11">
-          <input id="studentName" name="studentName" type="text" class="validate">
+          <input id="student1" name="studentName" type="text" class="validate">
           <label class="active" for="studentName">Student Name: </label>
         </div>
       </div>
 
       <div id="addMoreStudentRow" class="row">
-        <button id="addMoreStudents" type="submit" class="waves-effect waves-light btn-large col s11">Add More Students</button>
+        <button type="submit" id="addMoreStudents" class="waves-effect waves-light btn col s11">Add More Students</button>
+
       </div>
 
 
@@ -35,14 +36,17 @@
 
     <!-- Initial Welcome Message -->
     <div id="inspirational" class="col s5">
-
-      <form name="studentName1" action="/classroom">
         <h3>Your Class!</h3>
 
         <!-- Where additional students get appended -->
-        <div id="studentList"></div>
-        <button id="submitClass" type="submit" class="waves-effect waves-light btn-large col s12">Submit Class</button>
-      </form>
+        <div id="studentList">
+          <ul>
+            {{#each studentInfo}}
+            <li>{{this.student_name}}</li>
+            {{/each}}
+          </ul>
+        </div>
+        <a href="/classroom"><button id="submitClass" class="waves-effect waves-light btn-large col s12">Continue to Classroom</button></a>
     </div>
 
     <div class="col s1"></div>

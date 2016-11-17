@@ -12,9 +12,15 @@ module.exports = function(sequelize, DataTypes) {
   {
     classMethods: {
       associate: function(models) {
-        // associations can be defined here
+        // ClassInfo.hasMany(models.StudentInfo, {
+        //   onDelete: "CASCADE",
+        //   hooks: true,
+        //   foreignKey: {
+        //     allowNull: false
+        //   }
+        // })
       }
-    }
+    }    
   });
   return ClassInfo;
 };

@@ -18,7 +18,7 @@
     "method-override": "^2.3.5",
     "morgan": "~1.6.1",
     "mysql": "^2.11.1",
-    "sequelize": "^3.3.2",
+    "sequelize": "^3.26.0",
     "sequelize-cli": "^1.7.1",
     "serve-favicon": "~2.3.0"
   },

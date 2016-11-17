@@ -1,11 +1,19 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var StudentInfo = sequelize.define('StudentInfo', {
-    student_name: DataTypes.STRING
+    student_name: DataTypes.STRING,
+    assignment: DataTypes.STRING,
+    student_grade: DataTypes.STRING
   }, {
     classMethods: {
       associate: function(models) {
-        // associations can be defined here
+        //StudentInfo.hasOne(models.ClassInfo);
+        // StudentInfo.belongsTo(models.ClassInfo, {
+        //   onDelete: "CASCADE",
+        //   foreignKey: {
+        //     allowNull: false
+        //   }
+        // })
       }
     }
   });

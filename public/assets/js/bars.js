@@ -5,8 +5,8 @@ d3.json("/api/bar", function (error, response) {
       classData = dataSet.classData,
       stateData = dataSet.stateData;
 
-  var svgHeight  = 400;
-  var svgWidth   = 400;
+  var svgHeight  = 380;
+  var svgWidth   = 380;
   var maxScore   = 100; 
   var barSpacing = 1; 
   
@@ -88,7 +88,7 @@ d3.json("/api/bar", function (error, response) {
           class: 'bar'
       })
       .transition()
-      .duration(1500)
+      .duration(2000)
       .attr({
         y: function (d, i) {
           return convert.y(d.value);
@@ -100,7 +100,7 @@ d3.json("/api/bar", function (error, response) {
     
     bars.append("text")
      .attr("class", "bar-value")
-     .attr("transform", "translate(25,333)")
+     .attr("transform", "translate(25,318)")
      .text(function(d) { return d.value; })
      .style("fill", "white")
      .style("font-size", "1.75em"); 
@@ -151,7 +151,7 @@ d3.json("/api/bar", function (error, response) {
     chart.append('g') 
       .attr({
         class: 'x axis',
-        transform: 'translate(0,' + maxHeight + ')'
+        transform: 'translate(0,' + maxHeight + ')',
       })
       .call(axis.x); 
 
@@ -182,7 +182,7 @@ d3.json("/api/bar", function (error, response) {
           class: 'bar'
       })
       .transition()
-      .duration(1500)
+      .duration(2000)
       .attr({
         y: function (d, i) {
           return convert.y(d.value);
@@ -194,7 +194,7 @@ d3.json("/api/bar", function (error, response) {
 
     bars.append("text")
      .attr("class", "bar-value")
-     .attr("transform", "translate(22,335)")
+     .attr("transform", "translate(22,318)")
      .text(function(d) { return d.value; })
      .style("fill", "white")
      .style("font-size", "1.75em");

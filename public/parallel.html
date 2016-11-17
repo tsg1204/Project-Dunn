@@ -5,15 +5,26 @@
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <script src="assets/js/d3.parcoords.js"></script>
   <link rel="stylesheet" type="text/css" href="assets/css/d3.css">
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
 </head>
 <body>
-  <section class="centered">
+  
     <h1 class="heading">Class Stats VS. State Stats</h1>
-    <section class="container">
+    <section class="parallel">
+      <section class="box">
+        <h2 class='axis'>Pass Rate</h2>
+        <h2 class='axis'>Pass Proficient</h2>
+        <h2 class="axis">Pass Advanced</h2>
+        <h2 class="axis">Fail Rate</h2>
+      </section>
       <div id="parcoords" class="parcoords" style="width:700px;height:400px"></div>
+      <section class="box">
+        
+      </section>
     </section>
-    <a href="d3.html"><button class="changeView">Change View</button></a>
-  </section>
+    <section class="btn-div">
+      <a href="d3.html"><button class="changeView">Change View</button></a>
+    </section>
   
 </body>
 <script src="assets/js/parallel.js">

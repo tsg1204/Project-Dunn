@@ -59,6 +59,20 @@
             </div>
           </form>
 
+          {{#each studentInfo}}
+          <div class="row studentInformation">
+            <div class="input-field col s3">
+              <h5>{{this.student_name}}</h5>
+            </div>
+            <div class="input-field col s5">
+              <h5 class="hwAssignment">Today's Homework Assignment: </h5>
+            </div>
+            <div class="input-field col s3">
+              <h5 id="student1Grade" class="grade"></h5>
+            </div>
+          </div>
+          {{/each}}
+
           <!-- Student Information (Grade-wise) -->
           <div class="row studentInformation">
             <div class="input-field col s3">

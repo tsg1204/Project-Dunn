@@ -41,6 +41,10 @@ router.get('/api/parallel', function (req, res) {
 	});
 });
 
+router.get("/log", function (req, res) {
+	res.redirect('/login');
+});
+
 function makeBarData (data) {
 	var sum = 0;
 

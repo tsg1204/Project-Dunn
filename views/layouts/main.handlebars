@@ -27,5 +27,14 @@
 
 
     <script type="text/javascript" src="/assets/js/classroom.js"></script>
+    <script>
+    $('#logout').click(function () {
+      $.post("/logout")
+        .then(function(){
+          window.location.href = "/login"
+        });
+    });
+    
+  </script>
   </body>
 </html>

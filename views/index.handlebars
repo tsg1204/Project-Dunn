@@ -24,13 +24,7 @@
   <body>
     <div class="container">
       <div class="row classInfoContainer">
-        <div class="col s1">
-          <li>
-            <form action="/logout" method="post">
-              <button id="logout" type="submit" name="logout" value="Logout">Logout</button>
-            </form>
-           </li>
-        </div>
+        <div class="col s1"></div>
 
         <!-- classInfoForm -->
         <form  id="classForm" class="create-update-form col s5" action="create" method="POST">
@@ -79,10 +73,13 @@
 
         <div class="col s1"></div>
       </div>
+
+    </div>
+    <div class="row">
+      <div class="col s1 offset-s9">
+        <button type="submit" id="logout" value="logout" class="btn waves-effect">Logout</button>
+      </div>
     </div>
 
   </body>
-  <script>
-    
-  </script>
 </html>

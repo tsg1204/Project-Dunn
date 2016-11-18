@@ -11,6 +11,12 @@ module.exports = {
       student_name: {
         type: Sequelize.STRING
       },
+      assignment: {
+        type: Sequelize.STRING
+      },
+      student_grade: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

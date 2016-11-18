@@ -12,34 +12,43 @@
 
 
     <div id="whereToPutSeats">
-      {{#each studentInfo}}
-          <a class='waves-effect waves-light btn studentButtons'>{{this.student_name}}</a>
-      {{/each}}
+        {{#each studentInfo}}
+        <div class='col s2 student'>
+          <a id="seat" class="waves-effect waves-light btn">{{this.student_name}}</a>
+        </div>
+        {{/each}}
     </div>
-
-    <!-- Modal Structure -->
-    <div id="modal1" class="modal bottom-sheet">
-      <div class="modal-content">
-        <div class="row">
-          <!-- Manual Grade Input -->
-          <form id="gradeInputForm" class="col s12">
+{{!--           <form id="gradeInputForm" class="col s12" name="grades" action="classroom/update/{{this.id}}?_method=PUT" method="POST">
+>>>>>>> student table, classroom contr changed
             <div class="row">
             </div>
             <div class="row">
               <div class="input-field col s3">
                 <i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" class="validate">
-                <label for="icon_prefix">Student Name</label>
-              </div>
+                <!--<input id="icon_prefix" type="text" class="validate">
+                <label for="icon_prefix">Student Name</label>-->
+                <!-- Dropdown Trigger -->
+                <a class='dropdown-button btn' href='#' data-activates='dropdown1'>  Student Name</a>
+
+                <!-- Dropdown Structure -->
+                <ul id='dropdown1' class='dropdown-content'>
+                  {{#each studentInfo}}
+                    <li><a href="#!">{{this.student_name}}</a></li>
+                    <li class="divider"></li>
+                  {{/each}}
+                </ul>                
+              </div>   
+
               <div class="input-field col s3">
                 <i class="material-icons prefix">input</i>
-                <input id="gradeInput" type="text" class="validate">
+                <input id="gradeInput" name="grade" type="text" class="validate">
                 <label for="gradeInput">Input Grade</label>
               </div>
               <div class="input-field col s3">
                 <a id="addGrade" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
               </div>
             </div>
+<<<<<<< bc1edf129ebf596cc205faf78d1ff911f70b9400
           </form>
 
           {{#each studentInfo}}
@@ -59,6 +68,40 @@
 
 
 
+=======
+          </form> --}}
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal bottom-sheet">
+      <div class="modal-content">
+        <div class="row">
+          <!-- Manual Grade Input -->
+
+            {{#each studentInfo}}
+            <!-- Student Information (Grade-wise) -->
+            <form id="gradeInputForm" class="col s12" name="grades" action="classroom/update/{{this.id}}?_method=PUT" method="POST">
+            <div class="row studentInformation">
+              <div class="input-field col s2">
+                <h6>{{this.student_name}}</h6>
+              </div>
+              <div class="input-field col s3">
+                <h6 class="hwAssignment">Today's Homework: {{this.assignment}}</h6>
+              </div>
+              <div class="input-field col s2">
+                <h6 id="student1Grade" class="grade"> {{this.student_grade}}</h6>
+              </div>
+              
+              <div class="input-field col s3">
+                <i class="material-icons prefix">input</i>
+                <input id="gradeInput" name="grade" type="text" class="validate">
+                <label for="gradeInput">Input Grade</label>
+              </div>
+              <div class="input-field col s2">
+                <a id="addGrade" class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">add</i></a>
+              </div> 
+                           
+            </div>
+            </form>
+            {{/each}}
         </div>
       </div>
       <div class="modal-footer">
@@ -76,7 +119,6 @@
     </div>
 
     <div id='classSpecs' class='row'>
-
       {{#each ClassInfos}}
         <h5>Class: {{this.class_name}}</h5>
         <h5>Teacher: {{this.teacher_name}}</h5>
@@ -101,5 +143,3 @@
     
   </div>
 </div>
-
-<script type="text/javascript" src="/assets/js/classroom.js"></script>

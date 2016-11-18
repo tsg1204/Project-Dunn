@@ -44,17 +44,7 @@
 // var studentCount = 1;
 // var studentNames = [];
 
-<<<<<<< bc1edf129ebf596cc205faf78d1ff911f70b9400
-$("#addMoreStudents").on("click", function () {
-  var student1 = $("#student1").val();
-  var addedStudent = "<p>" + studentCount + ". " + student1 + "</p>";
-  $("#studentList").append(addedStudent);
-  studentNames.push(student1);
-  studentCount++;
-  $("#addMoreStudents").text("Add Another Student");
-  $("#student1").val("");
-});
-=======
+
 // $("#addMoreStudents").on("click", function () {
 //   //capture the value
 //   var student1 = $("#student1").val();
@@ -74,7 +64,6 @@ $("#addMoreStudents").on("click", function () {
 //   $("#addMoreStudents").text("Add Another Student");
 //   $("#student1").val("");
 // });
->>>>>>> student table, classroom contr changed
 
 
 //For Classroom

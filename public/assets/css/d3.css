@@ -1,6 +1,7 @@
-* {
-  font-family: Arial;
-  }
+@font-face {
+    font-family: 'Crayon';
+    src: url('CoolCrayon.woff') format('woff');
+}
 
 .changeView {
   -moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
@@ -20,34 +21,110 @@
   text-decoration:none;
   text-shadow:0px 1px 0px #b23e35;
 }
+
 .changeView:hover {
   background-color:#eb675e;
 }
+
 .changeView:active {
   position:relative;
   top:1px;
 }
 
-
 .heading {
-  text-align: center;
-  text-decoration: underline;
+  display: inline-block;
+  color: #faebd7;
+  position: relative;
+  top: 50px;
+  margin: 0;
+  font-size: 2.3em;
+  font-family: "Crayon";
 }
 
-.container {
+.heading2 {
+  margin-left: 20px;
+}
+
+.headings {
+  display: inline-block;
+}
+
+.charts {
+  float: right;
+  position: relative;
+  bottom: 85px;
+  margin-right: 75px;
+}
+
+.box {
   display: flex;
+  justify-content: space-between;
+}
+
+.box:first-child .axis:first-child {
+  margin-left: 30px;
+}
+
+.box:first-child .axis:nth-child(4) {
+  margin-right: 40px;
+}
+
+.box:nth-child(3) {
   justify-content: center;
-  width: 90%;
-  margin: auto;
+}
+
+.axis {
+  display: inline;
+  font-family: "Crayon";
+  color: white;
+}
+
+.parallel {
+  float: right;
+  position: fixed;
+  top: 25%;
+  left: 48%;
+}
+
+#parcoords {
+  transition: opacity;
+  opacity: .8;
+}
+
+#parcoords:hover {
+  opacity: 1;
+}
+
+.contain {
+  display: flex;
+  flex-direction: column;
+}
+
+#link {
+  text-align: center;
 }
 
 .chart-container {
   display: inline-block;
 }
 
-.label:nth-child(2) {
+.label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: rotate(270deg);
+  color: white;
   position: relative;
-  left: 35px;
+  left: 100px;
+  font-size: 2em;
+  font-family: "Crayon";
+  letter-spacing: 7px;
+} 
+
+.btn-div {
+  position: fixed;
+  top: 8%;
+  left: 40%;
 }
 
 .chart {
@@ -64,18 +141,13 @@
 }
 
 .state-chart {
-  fill: #00b6ba;
+  fill: #81FFFF;
 }
 
 .title {
   text-align: center;
   font-size: 2em;
   font-family: Arial;
-}
-
-.label {
-  width: 450px;
-  text-align: center;
 }
 
 .bar-value {
@@ -114,6 +186,11 @@
   transform: translate(-50%, -50%);
 }
 
+html {
+  background-image: url("http://www.hathershawtech.com/images/Blackboard.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 /* Parallel Coordinate Graph CSS */
 .parcoords > canvas {
@@ -154,4 +231,6 @@
   user-select: none;
   background-color: white;
 }
+
+
 

@@ -3,26 +3,35 @@
 <head>
   <title>Graphs</title>
   <script src="https://d3js.org/d3.v3.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="assets/css/d3.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/d3.css">
+  <link href="https://fonts.googleapis.com/css?family=Butterfly+Kids" rel="stylesheet">
 </head>
 
 <body>
-  <section class="centered">
-    <h1 class="heading">Statewide Student Success Rates</h1>
-    <section class="container">
+  <section class="left">
+    <section class="contain">
+        <h2 class="heading">Statewide Student</h2>
+        <h2 class="heading heading2">Success Rates</h2>
+    </section>
+  </section>
+  <section class="right"> 
+    <section class="contain charts">
       <div class="chart chart-container">
+        <h2 class="label">Class Scores</h2>
         <svg class="class-chart"></svg>
       </div>
       <div class="chart chart-container">
+        <h2 class="label">State Scores</h2>
         <svg class="state-chart"></svg>
       </div>
     </section>
-    <section id="labels" class="container">
-      <h2 class="label">Class Scores</h2>
-      <h2 class="label">State Scores</h2>
-    </section>
-    <a href="parallel.html"><button class="changeView">Change View</button></a>
+    
   </section>
+  <section class="btn-div">
+      <a id="link" href="parallel.html"><button class="changeView">Change View</button></a>
+  </section>
+
+    
   <script src="assets/js/bars.js"></script>
   <script src="assets/js/parallel.js"></script>
 </body>

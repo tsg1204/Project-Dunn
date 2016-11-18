@@ -15,12 +15,14 @@
     "express": "~4.13.1",
     "express-handlebars": "^2.0.1",
     "express-session": "^1.13.0",
+    "express-stormpath": "^3.1.6",
     "method-override": "^2.3.5",
     "morgan": "~1.6.1",
     "mysql": "^2.11.1",
     "sequelize": "^3.26.0",
     "sequelize-cli": "^1.7.1",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "stormpath": "^0.18.5"
   },
   "repository": {
     "type": "git",

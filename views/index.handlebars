@@ -76,22 +76,10 @@
 
     </div>
     <div class="row">
-        <div class="col s1 offset-s9">
-          <button type="submit" id="logout" value="logout" class="btn waves-effect">Logout</button>
-        </div>
+      <div class="col s1 offset-s9">
+        <button type="submit" id="logout" value="logout" class="btn waves-effect">Logout</button>
       </div>
+    </div>
 
   </body>
-  <script>
-    $('#logout').click(function () {
-      $.post("/logout")
-        .then(function(){
-          window.location.href = "/login"
-        });
-         
-      
-      
-    });
-    
-  </script>
 </html>

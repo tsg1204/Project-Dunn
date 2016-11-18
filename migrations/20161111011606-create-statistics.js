@@ -3,7 +3,7 @@ module.exports = {
   up: function(queryInterface, Sequelize) {
     return queryInterface.createTable('statistics', {
       id: {
-        allowNull: false,
+        allowNull: true,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
@@ -20,7 +20,7 @@ module.exports = {
       pass_adv_rate: {
         type: Sequelize.INTEGER
       },
-      pass_fail_rate: {
+      fail_rate: {
         type: Sequelize.INTEGER
       },
       createdAt: {

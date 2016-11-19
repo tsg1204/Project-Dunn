@@ -19,6 +19,5 @@
     "database": "bd2jby12xx92aj3n",
     "host": "enqhzd10cxh7hv2e.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
-    "use_env_variable": "mysql://ak20c7vvbykflhui:d2to3sowp98e6u2l@enqhzd10cxh7hv2e.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/bd2jby12xx92aj3n"
   }
 }

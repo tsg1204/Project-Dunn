@@ -3,7 +3,7 @@
     src: url('CoolCrayon.woff') format('woff');
 }
 
-.changeView {
+.changeView, .backToClass {
   -moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
   -webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;
   box-shadow:inset 0px 39px 0px -24px #e67a73;
@@ -22,11 +22,11 @@
   text-shadow:0px 1px 0px #b23e35;
 }
 
-.changeView:hover {
+.changeView:hover, .backToClass:hover {
   background-color:#eb675e;
 }
 
-.changeView:active {
+.changeView:active, .backToClass:active {
   position:relative;
   top:1px;
 }
@@ -120,6 +120,7 @@
 
 .btn-div {
   align-self: flex-end;
+  margin: 5px 0;
 }
 
 .chart {

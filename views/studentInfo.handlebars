@@ -4,48 +4,49 @@
     <div class="col s1"></div>
 
     <!-- studentInfoForm -->
-    <form id="studentsForm" name="students" class="col s5" action="students/create" method="POST">
-      <div class="row">
+    <form id="studentsForm" name="students" class="col s10" action="students/create" method="POST">
+      <!-- <div class="row">
         <div id="instructions" class="col s11">
           <h5>Adding students to your class is EASY!</h5>
           <hr>
           <h5 id="studentAdditions">
             Just do this! <br /><i class="large material-icons">system_update_alt</i>
-
           </h5>
-
         </div>
-      </div>
+      </div> -->
 
       <div id="newStudent" class="row">
-        <div class="input-field col s11">
+        <div class="input-field col s12">
           <input id="student1" name="studentName" type="text" class="validate">
           <label class="active" for="studentName">Student Name: </label>
         </div>
       </div>
 
       <div id="addMoreStudentRow" class="row">
-        <button type="submit" id="addMoreStudents" class="waves-effect waves-light btn col s11">Add Student</button>
-
+        <button type="submit" id="addMoreStudents" class="waves-effect waves-light btn col s12">Add Student</button>
       </div>
 
+      <div id="inspirational" class="row">
+          <h3>Your Class!</h3>
 
+          <!-- Where additional students get appended -->
+          <div id="studentList" class="col s6 offset-s3">
+            <ul>
+              {{#each studentInfo}}
+              <li><h5>{{this.student_name}}</h5></li>
+              {{/each}}
+            </ul>
+          </div>
+      </div>
     </form>
+    <div class="row">
+      <div class="col s10 offset-s1">
+        <a href="/classroom"><button id="submitClass" class="waves-effect waves-light btn-large col s12">Submit Class and Continue Your Classroom!</button></a>
+      </div>
+    </div>
 
     <!-- Initial Welcome Message -->
-    <div id="inspirational" class="col s5">
-        <h3>Your Class!</h3>
 
-        <!-- Where additional students get appended -->
-        <div id="studentList">
-          <ol>
-            {{#each studentInfo}}
-            <li>{{this.student_name}}</li>
-            {{/each}}
-          </ol>
-        </div>
-        <a href="/classroom"><button id="submitClass" class="waves-effect waves-light btn-large col s12">Submit Class and Continue Your Classroom!</button></a>
-    </div>
 
     <div class="col s1"></div>
   </div>

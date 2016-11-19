@@ -60,8 +60,8 @@ function makeBarData (data) {
 		{name: "min", value: min},
 		{name: "max", value: max},
 		{name: "avg", value: Math.round(sum/data.length)},
-		{name: "range", value: range},
-		{name: "median", value: median}
+		{name: "ran", value: range},
+		{name: "med", value: median}
 	]
 };
 

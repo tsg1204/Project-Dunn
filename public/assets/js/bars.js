@@ -1,12 +1,10 @@
-
- 
 d3.json("/api/bar", function (error, response) {
   var dataSet   = response,
       classData = dataSet.classData,
       stateData = dataSet.stateData;
 
-  var svgHeight  = 380;
-  var svgWidth   = 380;
+  var svgHeight  = 300;
+  var svgWidth   = 300;
   var maxScore   = 100; 
   var barSpacing = 1; 
   

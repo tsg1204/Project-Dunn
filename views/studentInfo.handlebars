@@ -1,20 +1,7 @@
 <div class="container">
-
   <div class="row  classInfoContainer">
     <div class="col s1"></div>
-
-    <!-- studentInfoForm -->
     <form id="studentsForm" name="students" class="col s10" action="students/create" method="POST">
-      <!-- <div class="row">
-        <div id="instructions" class="col s11">
-          <h5>Adding students to your class is EASY!</h5>
-          <hr>
-          <h5 id="studentAdditions">
-            Just do this! <br /><i class="large material-icons">system_update_alt</i>
-          </h5>
-        </div>
-      </div> -->
-
       <div id="newStudent" class="row">
         <div class="input-field col s12">
           <input id="student1" name="studentName" type="text" class="validate">
@@ -28,8 +15,6 @@
 
       <div id="inspirational" class="row">
           <h3>Your Class!</h3>
-
-          <!-- Where additional students get appended -->
           <div id="studentList" class="col s6 offset-s3">
             <ul>
               {{#each studentInfo}}
@@ -44,10 +29,6 @@
         <a href="/classroom"><button id="submitClass" class="waves-effect waves-light btn-large col s12">Submit Class and Continue Your Classroom!</button></a>
       </div>
     </div>
-
-    <!-- Initial Welcome Message -->
-
-
     <div class="col s1"></div>
   </div>
 </div>

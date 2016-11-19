@@ -4,10 +4,14 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   /*background-position: center center;*/
-  
+
 }
 
 h3 {
+  text-align: center;
+}
+
+h4 {
   text-align: center;
 }
 
@@ -28,6 +32,21 @@ h3 {
   border-radius: 5px;
   height: 459px;
   padding: 25px;
+}
+
+#inspirational p {
+  text-align: center;
+}
+
+#logout {
+  background: rgba(255,255,255,0.5);
+  color: black;
+  margin-top: 5px;
+}
+
+#logout:hover {
+  background-color: rgba(255,0,50, 0.35);
+  color: white;
 }
 
 /* label color */
@@ -51,7 +70,7 @@ h2 {
 }
 
 h5 {
-  text-align: left;
+  text-align: center;
 }
 
 #addMoreStudentsRow {
@@ -78,6 +97,7 @@ text-align: center;
 padding: 3px;
 padding-left: 10px;
 padding-right: 10px;
+margin-top: 32px
 }
 
 /*Classroom CSS*/

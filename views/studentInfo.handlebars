@@ -8,14 +8,12 @@
       <div class="row">
         <div id="instructions" class="col s11">
           <h5>Adding students to your class is EASY!</h5>
-          <p id="studentAdditions">
-            Instructions For Adding Students to class<br />
-            1. Instruction 1 <br />
-            2. Instruction 2 <br />
-            3. Instruction 3 <br />
-            4. Instruction 4 <br />
-            5. Instruction 5 <br />
-          </p>
+          <hr>
+          <h5 id="studentAdditions">
+            Just do this! <br /><i class="large material-icons">system_update_alt</i>
+
+          </h5>
+
         </div>
       </div>
 
@@ -27,7 +25,7 @@
       </div>
 
       <div id="addMoreStudentRow" class="row">
-        <button type="submit" id="addMoreStudents" class="waves-effect waves-light btn col s11">Add More Students</button>
+        <button type="submit" id="addMoreStudents" class="waves-effect waves-light btn col s11">Add Student</button>
 
       </div>
 
@@ -40,13 +38,13 @@
 
         <!-- Where additional students get appended -->
         <div id="studentList">
-          <ul>
+          <ol>
             {{#each studentInfo}}
             <li>{{this.student_name}}</li>
             {{/each}}
-          </ul>
+          </ol>
         </div>
-        <a href="/classroom"><button id="submitClass" class="waves-effect waves-light btn-large col s12">Continue to Classroom</button></a>
+        <a href="/classroom"><button id="submitClass" class="waves-effect waves-light btn-large col s12">Submit Class and Continue Your Classroom!</button></a>
     </div>
 
     <div class="col s1"></div>

@@ -98,7 +98,8 @@ d3.json("/api/bar", function (error, response) {
     
     bars.append("text")
      .attr("class", "bar-value")
-     .attr("transform", "translate(25,318)")
+     .attr("transform", "translate(14,0)")
+     .attr("text-anchor", "right")
      .text(function(d) { return d.value; })
      .style("fill", "white")
      .style("font-size", "1.75em"); 
@@ -192,7 +193,8 @@ d3.json("/api/bar", function (error, response) {
 
     bars.append("text")
      .attr("class", "bar-value")
-     .attr("transform", "translate(22,318)")
+     .attr("transform", "translate(14,0)")
+     .attr("text-anchor", "right")
      .text(function(d) { return d.value; })
      .style("fill", "white")
      .style("font-size", "1.75em");

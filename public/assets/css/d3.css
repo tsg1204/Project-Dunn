@@ -228,6 +228,22 @@ html {
   background-color: white;
 }
 
+@media screen and (max-width: 717px) {
+  html {
+    background-size: cover;
+  }
+
+  .charts {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .btn-div {
+    margin: auto;
+  }
+}
+
 @media screen and (max-width: 930px) {
   html {
     background-size: inherit;
@@ -245,7 +261,8 @@ html {
 
   .headings {
     margin: auto;
-    width: 40%;
+    width: 100%;
+    text-align: center;
   }
 
   .heading2 {
@@ -254,6 +271,8 @@ html {
 
   .contain {
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .charts {
@@ -264,10 +283,32 @@ html {
 
   .btn-div {
     align-self: flex-start;
+    margin: 5px;
+  }
+  @media screen and (max-width: 717px) {
+  html {
+    background-size: cover;
+  }
+
+  .charts {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .btn-div {
+    margin: auto;
+  }
+}
+}
+
+@media screen and (min-width: 931px) and (max-width: 1024px) {
+  .axis {
+    margin-right: 20px !important;
   }
 }
 
-@media screen and (max-width: 1172px) {
+@media screen and (min-width:1025) and (max-width: 1172px) {
   .axis {
     margin: 0 !important;
   }
@@ -292,11 +333,10 @@ html {
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .axis {
-    margin-right: 20px !important;
-  }
-}
+
+
+
+
 
 
 

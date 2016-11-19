@@ -1,22 +1,25 @@
-
+<div id="assignGradesMobile" class='row'>
+  <a id="modalButton2" class="waves-effect waves-light btn col s12" href="#gradesModal">Assign Grades</a>
+</div>
 
 <div id="topRow" class="row">
   <div id='sidebar' class='col s12'>
     <div id='classSpecs' class='row'>
       <div class='col s1'></div>
-      <div class='col s4'>
+      <div id="classInfoHead" class='col s3'>
         {{#each ClassInfos}}
           <h5>Class: {{this.class_name}}</h5>
           <h5>Teacher: {{this.teacher_name}}</h5>
           <h5>Grade: {{this.grade}}</h5>
         {{/each}}
-        <!-- <a href="d3.html">How does your class stack up with national averages?</a>    </div> -->
+        <a href="d3.html" style="color:white">How does your class stack up with national averages?</a><br />
+        <button type="submit" id="logout" value="logout" class="btn waves-effect">Logout</button>
 
       </div>
       <div class='col s3'>
         <a id='randomize' class="waves-effect waves-light btn col s12">Generate Class Seating</a>
       </div>
-      <div class='col s4'>
+      <div class='col s3'>
         <a id="modalButton" class="waves-effect waves-light btn col s12" href="#gradesModal">Assign Grades</a>
       </div>
     </div>
@@ -62,7 +65,7 @@
               <div class="input-field col s2">
                 <h6>{{this.student_name}}</h6>
               </div>
-              <div class="input-field col s3">
+              <div id="todaysHW" class="input-field col s3">
                 <h6 class="hwAssignment">Today's Homework: {{this.assignment}}</h6>
               </div>
               <div class="input-field col s2">
@@ -70,7 +73,7 @@
               </div>
 
               <div class="input-field col s3">
-                <i class="material-icons prefix">input</i>
+                <i id="inputIcon" class="material-icons prefix">input</i>
                 <input id="gradeInput" name="grade" type="text" class="validate">
                 <label for="gradeInput">Input Grade</label>
               </div>
@@ -109,7 +112,7 @@
   </div> -->
 </div>
 
-    <div id='lessonPlan' class='row'>
+    <!-- <div id='lessonPlan' class='row'>
       <h5>Lesson Plan</h5>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -117,11 +120,11 @@
       <p>
         <a href="https://docs.google.com/document/d/1ZkaDSltDIJukowQPu3S_POeUEWChsMNWEXjJB90SmIM/edit?usp=sharing" target="_blank">Link to Lesson Plan/Class Activity</a>
       </p>
-    </div>
+    </div> -->
   </div>
-  <div class="row">
+  <!-- <div class="row">
     <div class="col s1 offset-s9">
       <button type="submit" id="logout" value="logout" class="btn waves-effect">Logout</button>
     </div>
-  </div>
+  </div> -->
 </div>
